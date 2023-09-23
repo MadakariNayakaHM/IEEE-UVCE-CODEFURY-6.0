@@ -97,7 +97,31 @@ exports.viewReview=async (req,res,next)=>{
 exports.viewDashBoard=async(req,res,next)=>
 {
     try{
-res.status(200).render('userDashboard')
+        var count=0, acc=0, pen=0
+        const id =jwt.verify(req.cookies.jwt, process.env.JWT_SECRET, (err, decoded) => { return decoded.id });
+       let use= await User.findById(id);
+const view= await Post.find();
+// console.log(view)
+// console.log(id)
+for(i=0;i<view.length;i++)
+{
+    
+
+    if(view[i].from.email===use.email || view[i].to.email==use.email)
+    {
+        if(view[i].Accept==0)
+    {
+        pen=pen+1;
+    }
+    else if(view[i].Accept==1)
+    {
+        acc=acc+1;
+    }
+    count=count+1;
+    }
+}
+// console.log(pen,acc,count);
+res.status(200).render('userDashboard',{count,acc,pen})
     }catch(e){
         console.log(e);
         console.log("err in viewDash")

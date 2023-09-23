@@ -1,14 +1,14 @@
 {
-  "name": "err_404_5.0",
+  "name": "codefury",
   "version": "1.0.0",
-  "description": "a 24 hours hackathon held at MHSSCE mumbai, with on spot probleem statement",
+  "description": "a 24 hours hackathon held at UVCE, with on spot probleem statement",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "devstart":"node index.js"
   },
-  "author": "Madakari Nayaka Hm , Vignesh A M , Thejasvi ES , Sagar R , Mangesh Shresta",
+  "author": "Madakari Nayaka Hm ",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

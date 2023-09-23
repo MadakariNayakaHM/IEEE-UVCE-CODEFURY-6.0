@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "codefury",
-=======
-  "name": "codefury6.0",
->>>>>>> 3d2680d5ee25586b1cc09189d9667d8409389391
   "version": "1.0.0",
   "description": "a 24 hours hackathon held at UVCE, with on spot probleem statement",
   "main": "server.js",
